@@ -2,6 +2,7 @@ packages:
   # dataset construction
   - downloader
   - stringr
+  - datastorr
   - baad.data
   # statistics
   - multcomp  #cld
