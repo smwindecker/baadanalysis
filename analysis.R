@@ -23,13 +23,13 @@ library(gridBase)
 library(gridExtra)
 
 # source function scripts -----------------
-source('R/data_processing.R')
-source('R/tables_stats.R')
-source('R/figures.R')
-source('R/functions-figures.R')
-source('R/signifletters.R')
-source('R/build.R')
-source('R/manuscript_functions.R')
+source("R/data_processing.R")
+source("R/tables_stats.R")
+source("R/figures.R")
+source("R/functions-figures.R")
+source("R/signifletters.R")
+source("R/build.R")
+source("R/manuscript_functions.R")
 
 # Data --------------------------------------
 baad_all <- baad_data(I("1.0.0"))
@@ -39,7 +39,7 @@ world_mapmat <- prepare_worldmapmat("data/Worldclim_landcover_climspace_withcove
 baad_climate2 <- addMImgdd0(baad_climate1, "data/MI_mGDDD_landcover_filtered.rds")
 baad_climate3 <- addPET(baad_climate2, "data/zomerpet.rds")
 dataset <- prepare_dataset_1(baad_climate3, plantations=TRUE)
-# download_baad('downloads/baad.rds')
+# download_baad("downloads/baad.rds")
 cfg <- extract_baad_dictionary(baad_all)
 
 # Stats & tables --------------------------------------
@@ -53,49 +53,49 @@ msas <- ms_as_stat(dataset)
 table_samplesize <- make_samplesize_table(dataset)
 
 # Figures --------------------------------------
-download_tree_png('downloads/ian-symbol-eucalyptus-spp-1.png')
+download_tree_png("downloads/ian-symbol-eucalyptus-spp-1.png")
 
-pdf('figures/Figure1.pdf', width = 8, height = 4)
+pdf("figures/Figure1.pdf", width = 8, height = 4)
 figure1(baad_mapmat, world_mapmat, "downloads/ian-symbol-eucalyptus-spp-1.png")
 dev.off()
 
-pdf('figures/Figure2.pdf', width = 8, height = 4)
+pdf("figures/Figure2.pdf", width = 8, height = 4)
 figure2(dataset)
 dev.off()
 
-pdf('figures/Figure3.pdf', width = 8, height = 6)
+pdf("figures/Figure3.pdf", width = 8, height = 6)
 figure3(dataset)
 dev.off()
 
-pdf('figures/Figure4.pdf', width = 8, height = 4)
+pdf("figures/Figure4.pdf", width = 8, height = 4)
 figure4(dataset, nbin=75)
 dev.off()
 
-pdf('figures/Figure5.pdf', width = 8, height = 4)
+pdf("figures/Figure5.pdf", width = 8, height = 4)
 figure5(dataset)
 dev.off()
 
-pdf('figures/Figure6.pdf', width = 8, height = 4)
+pdf("figures/Figure6.pdf", width = 8, height = 4)
 figure6(dataset)
 dev.off()
 
-pdf('figures/FigureS1.pdf', width = 6, height = 6)
+pdf("figures/FigureS1.pdf", width = 6, height = 6)
 figureS1(baad_mapmat, world_mapmat)
 dev.off()
 
-pdf('figures/FigureS2.pdf', width = 8, height = 4)
+pdf("figures/FigureS2.pdf", width = 8, height = 4)
 figureS2(table_hierpart,table_varpart_gam_old,table_varpart_lmer)
 dev.off()
 
-pdf('figures/FigureS3.pdf', width = 8, height = 4)
+pdf("figures/FigureS3.pdf", width = 8, height = 4)
 figureS3(dataset)
 dev.off()
 
-pdf('figures/FigureS4.pdf', width = 8, height = 4)
+pdf("figures/FigureS4.pdf", width = 8, height = 4)
 figureS4(dataset)
 dev.off()
 
-pdf('figures/FigureS5.pdf', width = 8, height = 4)
+pdf("figures/FigureS5.pdf", width = 8, height = 4)
 figureS5(dataset)
 dev.off()
 
