@@ -99,9 +99,9 @@ pdf('figures/FigureS5.pdf', width = 8, height = 4)
 figureS5(dataset)
 dev.off()
 
-knitr::knit('manuscript.Rnw')
-tinytex::pdflatex("manuscript.tex", clean = TRUE)
+knitr::knit("ms/manuscript.Rnw", output = "ms/manuscript.tex")
+tinytex::pdflatex("ms/manuscript.tex", pdf_file = "ms/manuscript.pdf")
 
-knitr::knit('manuscript_suppinfo.Rnw')
-tinytex::pdflatex("manuscript_suppinfo.tex", clean = TRUE)
+knitr::knit("ms/manuscript_suppinfo.Rnw", output = "ms/manuscript_suppinfo.tex")
+tinytex::pdflatex("ms/manuscript_suppinfo.tex", pdf_file = "ms/manuscript_suppinfo.pdf")
 

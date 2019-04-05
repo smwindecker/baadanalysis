@@ -60,10 +60,10 @@ plot_options:
 targets:
   all:
     depends:
-      - manuscript.pdf
-      - manuscript_suppinfo.pdf
+      - ms/manuscript.pdf
+      - ms/manuscript_suppinfo.pdf
 
-  manuscript.pdf:
+  ms/manuscript.pdf:
     depends:
       - figures/Figure1.pdf
       - figures/Figure2.pdf
@@ -75,9 +75,9 @@ targets:
       - table_samplesize
       - afas
       - msas
-    command: pdflatex("manuscript.tex")
+    command: pdflatex("ms/manuscript.tex")
 
-  manuscript.tex:
+  ms/manuscript.tex:
     depends:
       - baad_all
       - baad_mapmat
@@ -89,7 +89,7 @@ targets:
       - dataset
     knitr: TRUE
 
-  manuscript_suppinfo.pdf:
+  ms/manuscript_suppinfo.pdf:
     depends:
       - figures/FigureS1.pdf
       - figures/FigureS2.pdf
@@ -99,9 +99,9 @@ targets:
       - table_varpart_gam_old
       - table_varpart_lmer
       - table_hierpart
-    command: pdflatex("manuscript_suppinfo.tex")
+    command: pdflatex("ms/manuscript_suppinfo.tex")
 
-  manuscript_suppinfo.tex:
+  ms/manuscript_suppinfo.tex:
     depends:
       - table_varpart_gam_old
       - table_varpart_lmer
