@@ -32,10 +32,10 @@ source("R/build.R")
 source("R/manuscript_functions.R")
 
 # Data --------------------------------------
-baad_all <- baad_data(I("1.0.0"))
+baad_all <- baad_data("1.0.0")
 baad_climate1 <- addWorldClimMAPMAT(baad_all, "data/worldclimmapmat.rds")
 baad_mapmat <- prepare_baadmapmat(baad_climate1)
-world_mapmat <- prepare_worldmapmat("data/Worldclim_landcover_climspace_withcover.rds")
+world_mapmat <- prepare_worldmapmat("data/worldclim_landcover_climspace_withcover.rds")
 baad_climate2 <- addMImgdd0(baad_climate1, "data/MI_mGDDD_landcover_filtered.rds")
 baad_climate3 <- addPET(baad_climate2, "data/zomerpet.rds")
 dataset <- prepare_dataset_1(baad_climate3, plantations=TRUE)
@@ -53,7 +53,8 @@ msas <- ms_as_stat(dataset)
 table_samplesize <- make_samplesize_table(dataset)
 
 # Figures --------------------------------------
-download_tree_png("downloads/ian-symbol-eucalyptus-spp-1.png")
+# commend this out because can't download from internet within the virtual machine.
+# download_tree_png("downloads/ian-symbol-eucalyptus-spp-1.png")
 
 pdf("figures/Figure1.pdf", width = 8, height = 4)
 figure1(baad_mapmat, world_mapmat, "downloads/ian-symbol-eucalyptus-spp-1.png")

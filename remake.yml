@@ -134,7 +134,7 @@ targets:
   baad_mapmat:
     command: prepare_baadmapmat(baad_climate1)
   world_mapmat:
-    command: prepare_worldmapmat("data/Worldclim_landcover_climspace_withcover.rds")
+    command: prepare_worldmapmat("data/worldclim_landcover_climspace_withcover.rds")
   dataset:
     command: prepare_dataset_1(baad_climate3, plantations=TRUE)
   baad_climate1:
@@ -202,9 +202,4 @@ targets:
   figures/FigureS5.pdf:
     command: figureS5(dataset)
     plot: wide
-
-
-  downloads/ian-symbol-eucalyptus-spp-1.png:
-    command: download_tree_png(target_name)
-    cleanup_level: purge
 
