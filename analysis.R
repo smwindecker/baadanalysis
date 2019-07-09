@@ -100,6 +100,7 @@ pdf("figures/FigureS5.pdf", width = 8, height = 4)
 figureS5(dataset)
 dev.off()
 
+# Documents -------------
 knitr::knit("ms/manuscript.Rnw", output = "ms/manuscript.tex")
 tinytex::pdflatex("ms/manuscript.tex", pdf_file = "ms/manuscript.pdf")
 
