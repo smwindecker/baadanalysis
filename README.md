@@ -6,14 +6,10 @@ This repository contains code needed to reproduce the article:
 
 [![DOI](https://zenodo.org/badge/11128/RemkoDuursma/baadanalysis.svg)](https://zenodo.org/badge/latestdoi/11128/RemkoDuursma/baadanalysis)
 
-## Instructions
-
-All analyses were done in `R`. To reproduce the entire paper with the required software and all installations, you can run the analysis.R file in this [![interactive RStudio session](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/smwindecker/baadanalysis/master?urlpath=rstudio) hosted by binder. 
-
 Running the code
 --------
 
-All analyses were done in `R`. To reproduce this paper, run the code contained in the `analysis.R` file. 
+All analyses were done in `R`. To reproduce this paper, run the code contained in the `analysis.R` file.
 
 If reproducing these results on your own machine, you must first install the required packages, listed under `Depends` in the `DESCRIPTION` file. 
 
