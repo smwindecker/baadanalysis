@@ -1,15 +1,17 @@
 Type: Compendium
-Package: Compendium title
-Title: What the Package Does (One Line, Title Case)
+Package: Compendium
+Title: Leaf mass per area, not total leaf area, drives differences in above-ground biomass distribution among woody plant functional types
 Version: 0.0.1
-Authors@R: 
-    person(given = "First",
-           family = "Last",
+Authors@R: c(
+    person(given = "Remko",
+           family = "Duursma",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Compendium description
-License: What license it uses
+           email = "r.duursma@westernsydney.edu.au"),
+    person(given = "Daniel",
+           family = "Falster", 
+           role = "aut"))
+Description: This repository contains code needed to reproduce the article: Duursma RA, Falster DS, "Leaf mass per area, not total leaf area, drives differences in above-ground biomass distribution among woody plant functional types", New Phytologist (accepted 2016-04-28).
+License: MIT + file LICENSE
 Depends: 
     baad.data,
     car,
