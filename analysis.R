@@ -1,7 +1,5 @@
 
 # Packages -----------------
-devtools::install_github("richfitz/datastorr")
-devtools::install_github("traitecoevo/baad.data")
 
 library(downloader)
 library(stringr)
