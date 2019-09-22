@@ -2,7 +2,7 @@
 
 \usepackage{amssymb,amsmath}
 \usepackage{palatino}
-\usepackage[default,osfigures,scale=0.95]{opensans}
+\usepackage[default,scale=0.95]{opensans}
 \usepackage{geometry}
 \usepackage{authblk}
 \usepackage{gensymb}
