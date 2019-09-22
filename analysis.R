@@ -22,6 +22,7 @@ library(png)
 library(grid)
 library(gridBase)
 library(gridExtra)
+library(tinytex)
 
 # source function scripts -----------------
 source("R/data_processing.R")
@@ -103,8 +104,8 @@ dev.off()
 
 # Documents -------------
 knitr::knit("ms/manuscript.Rnw", output = "ms/manuscript.tex")
-tinytex::pdflatex("ms/manuscript.tex", pdf_file = "ms/manuscript.pdf")
+pdflatex("ms/manuscript.tex")
 
 knitr::knit("ms/manuscript_suppinfo.Rnw", output = "ms/manuscript_suppinfo.tex")
-tinytex::pdflatex("ms/manuscript_suppinfo.tex", pdf_file = "ms/manuscript_suppinfo.pdf")
+pdflatex("ms/manuscript_suppinfo.tex")
 
