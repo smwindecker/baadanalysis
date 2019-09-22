@@ -55,8 +55,11 @@ msas <- ms_as_stat(dataset)
 table_samplesize <- make_samplesize_table(dataset)
 
 # Figures --------------------------------------
-# commend this out because can't download from internet within the virtual machine.
+# comment this out because can't download from internet within the virtual machine.
+# dir.create('downloads')
 # download_tree_png("downloads/ian-symbol-eucalyptus-spp-1.png")
+
+dir.create('figures')
 
 pdf("figures/Figure1.pdf", width = 8, height = 4)
 figure1(baad_mapmat, world_mapmat, "downloads/ian-symbol-eucalyptus-spp-1.png")
