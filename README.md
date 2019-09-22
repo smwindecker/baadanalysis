@@ -29,7 +29,6 @@ To ensure long-term [computational reproducibility](https://www.britishecologica
 - `R/`: directory containing functions used in analysis
 - `ms/`: directory containing manuscript in LaTeX and accompanying style files 
 - `downloads/`: directory containing a png image of a tree downloaded from the web
-- `figures/`: directory containing figures for the manuscript that can be recreated using the `analysis.R` script
 - `DESCRIPTION`: A machine-readable [compendium]() file containing key metadata and dependencies 
 - `LICENSE`: License for the materials
 - `Dockerfile` & `.binder/Dockerfile`: files used to generate docker containers for long-term reproducibility
