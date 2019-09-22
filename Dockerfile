@@ -4,7 +4,7 @@ LABEL email="daniel.falster@unsw.edu.au"
 
 # Install major libraries
 RUN    apt-get update \
-    && apt-get install -y --no-install-recommends \
+    && apt-get -y install tcl8.6-dev tk8.6-dev \
          zip \
          unzip
 
