@@ -9,6 +9,7 @@
 .Rproj.user
 *.Rproj
 
+.local
 .maker
 .remake
 
